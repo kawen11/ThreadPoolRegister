@@ -1,4 +1,4 @@
-package com.jzx;
+package com.jzx.api;
 
 import com.google.common.base.Joiner;
 import com.google.common.util.concurrent.MoreExecutors;

@@ -1,7 +1,8 @@
 package com.jzx.handler;
 
 import java.util.concurrent.ExecutorService;
-import com.jzx.ExecutorServiceObject;
+
+import com.jzx.api.ExecutorServiceObject;
 
 /**
  * 默认线程池服务处理器.
