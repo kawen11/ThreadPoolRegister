@@ -9,7 +9,7 @@ public class ThreadExample {
 
 	public static void main(String[] args) {
 		ExecutorService excutorService = ExecutorServiceHandlerRegistry.getExecutorServiceHandler("job1",new DefaultExecutorServiceHandler());
-		excutorService.execute(new Runnable(){
+		excutorService.submit(new Runnable(){
 
 			public void run() {
 				System.out.println("Test good!");

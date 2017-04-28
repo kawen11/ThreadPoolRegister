@@ -22,7 +22,7 @@ public class ExecutorServiceObject {
     private final BlockingQueue<Runnable> workQueue;
     
     public ExecutorServiceObject(final String namingPattern, final int threadSize) {
-        workQueue = new LinkedBlockingQueue<Runnable>();
+        workQueue = new LinkedBlockingQueue<>();
         threadPoolExecutor = new ThreadPoolExecutor(threadSize, threadSize, 5L, TimeUnit.MINUTES, workQueue, 
                 new BasicThreadFactory.Builder().namingPattern(Joiner.on("-").join(namingPattern, "%s")).build());
         threadPoolExecutor.allowCoreThreadTimeOut(true);
