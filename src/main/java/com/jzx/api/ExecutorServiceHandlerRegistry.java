@@ -10,7 +10,7 @@ import com.jzx.handler.ExecutorServiceHandler;
  * 线程池服务处理器注册表.
  * 
  */
-public final class ExecutorServiceHandlerRegistry {
+public class ExecutorServiceHandlerRegistry {
     
     private static final Map<String, ExecutorService> REGISTRY = new HashMap<String, ExecutorService>();
     

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * 线程池执行服务对象.
  *
  */
-public final class ExecutorServiceObject {
+public class ExecutorServiceObject {
     
     private final ThreadPoolExecutor threadPoolExecutor;
     
