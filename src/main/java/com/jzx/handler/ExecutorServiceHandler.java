@@ -18,4 +18,13 @@ public interface ExecutorServiceHandler {
      * @return 线程池服务对象
      */
     ExecutorService createExecutorService(final String jobName);
+    
+    /**
+     * 创建线程池服务对象.
+     * 
+     * @param jobName 作业名
+     * @param threadNum 线程数
+     * @return 线程池服务对象
+     */
+    ExecutorService createExecutorService(final String jobName, int threadNum);
 }

@@ -29,6 +29,20 @@ public class ExecutorServiceHandlerRegistry {
     }
     
     /**
+     * 获取线程池服务.
+     * 
+     * @param jobName 作业名称
+     * @param executorServiceHandler 线程池服务处理器
+     * @return 线程池服务
+     */
+    public static synchronized ExecutorService getExecutorServiceHandler(final String jobName, final int threadNum, final ExecutorServiceHandler executorServiceHandler) {
+        if (!REGISTRY.containsKey(jobName)) {
+            REGISTRY.put(jobName, executorServiceHandler.createExecutorService(jobName, threadNum));
+        }
+        return REGISTRY.get(jobName);
+    }
+    
+    /**
      * 从注册表中删除该作业线程池服务.
      *
      * @param jobName 作业名称

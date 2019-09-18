@@ -12,4 +12,9 @@ public class DefaultExecutorServiceHandler implements ExecutorServiceHandler {
     public ExecutorService createExecutorService(final String jobName) {
         return new ExecutorServiceObject("inner-job-" + jobName, Runtime.getRuntime().availableProcessors() * 2).createExecutorService();
     }
+
+	@Override
+	public ExecutorService createExecutorService(String jobName, int threadNum) {
+		return new ExecutorServiceObject("inner-job-" + jobName, threadNum).createExecutorService();
+	}
 }
